@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rusa Reader - Trình đọc sách PDF thông minh kết hợp TTS đa ngôn ngữ, Khu Rừng Tri Thức 2.5D và thuật toán ghi nhớ Mindful FSRS.">
+    <title>Rusa Reader - Thấu vạn trang sách, Giữ vạn trải nghiệm</title>
+    <!-- Icon ứng dụng Rusa Reader -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-logo">
+            <img src="logo.png" alt="Rusa Reader Logo">
+            Rusa Reader
+        </div>
+        <div class="toolbar-actions">
+            <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">VI / EN</button>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="logo.png" alt="Rusa Reader" class="hero-logo">
+            <h1 class="hero-slogan" data-i18n="slogan">Thấu vạn trang sách — Giữ vạn trải nghiệm</h1>
+            <p class="hero-subtitle" data-i18n="hero_desc">Trình đọc sách PDF tốc độ cao tích hợp giọng đọc TTS đa ngôn ngữ, nhạc nền tập trung (BGM), Khu Rừng Tri Thức 2.5D và thuật toán ôn tập thư giãn Mindful FSRS.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.lathedo.rusareader" class="playstore-btn" target="_blank">
+                <i class="material-icons">shop</i>
+                <span data-i18n="download">Tải trên Google Play</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="feature-section bg-white">
+        <div class="container-inner layout-zigzag">
+            <div class="feature-visual">
+                <div class="mockup-shape">
+                    <div class="device-frame">
+                        <img src="reader.png" alt="Màn hình đọc sách PDF" title="Giao diện Rusa Reader">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title" data-i18n="box1_title">Trình đọc PDF & Sách nói thông minh</h2>
+                <p class="feature-desc" data-i18n="box1_desc">
+                    Trải nghiệm đọc và nghe sách mượt mà với công nghệ dựng hình C++ PDFium tốc độ cao, bảo vệ thị giác và tối ưu hóa sự tập trung.
+                </p>
+                <ul class="feature-list mt-4">
+                    <li>
+                        <i class="material-icons accent-icon">crop_free</i>
+                        <span data-i18n="icon_crop">Tự động cắt lề trắng (Auto-Crop), tô màu ghi chú và 3 chủ đề màu dịu mắt (Classic, Sepia, Mint).</span>
+                    </li>
+                    <li>
+                        <i class="material-icons accent-icon">record_voice_over</i>
+                        <span data-i18n="icon_tts">Đọc sách nói TTS đa ngôn ngữ tự động kèm Karaoke Highlight và nhạc nền Ambient (BGM).</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="feature-section bg-alt">
+        <div class="container-inner layout-zigzag reverse">
+            <div class="feature-visual">
+                <div class="mockup-shape">
+                    <div class="device-frame">
+                        <img src="forest.png" alt="Màn hình Khu Rừng Tri Thức 2.5D">
+                    </div>
+                </div>
+            </div>
+            <div class="feature-text">
+                <h2 class="feature-title" data-i18n="box2_title">Khu Rừng Tri Thức & Cánh Đồng 2.5D</h2>
+                <p class="feature-desc" data-i18n="box2_desc">
+                    Chuyển hóa kiến thức trang sách và trải nghiệm thực tế thành hệ sinh thái cây cổ thụ và cánh đồng lúa sống động.
+                </p>
+                <ul class="feature-list mt-4">
+                    <li>
+                        <i class="material-icons accent-icon">park</i>
+                        <span data-i18n="icon_forest">Nuôi dưỡng 9 loài Cây Sách qua 10 lăng kính câu hỏi thu hoạch và gieo Khóm Lúa Kinh Nghiệm.</span>
+                    </li>
+                    <li>
+                        <i class="material-icons accent-icon">psychology</i>
+                        <span data-i18n="icon_fsrs">Ghi nhớ tự nhiên không áp lực với thuật toán Mindful FSRS: Tưới nước chủ động & Tắm sương TTS.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="super__free">
+            <h3 class="super__free-h3" data-i18n="free_title">Kiến tạo khu rừng tri thức của riêng bạn</h3>
+            <p class="super__free-description" data-i18n="free_desc">
+                Biến mỗi cuốn sách đã đọc và mỗi trải nghiệm sống thành trí tuệ bền vững theo năm tháng.
+            </p>
+            <a href="https://play.google.com/store/apps/details?id=com.lathedo.rusareader" class="playstore-btn mt-4" target="_blank" style="margin-top: 24px; display: inline-flex;">
+                <i class="material-icons">shop</i>
+                <span data-i18n="download_cta">Tải trên Google Play</span>
+            </a>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 Rusa Reader. All rights reserved.</p>
+        <a href="policy_vi.html" id="link-policy" data-i18n="policy">Chính sách bảo mật</a> |
+        <a href="terms_vi.html" id="link-terms" data-i18n="terms">Điều khoản sử dụng</a> |
+        <a href="licenses_vi.html" id="link-licenses" data-i18n="licenses">Mã nguồn mở</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
