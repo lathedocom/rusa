@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách Bảo mật - Rusa Reader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-color: #006A80; 
+            --text-main: #333333; 
+            --bg-light: #f5f5f5; 
+            --card-bg: #ffffff; 
+        }
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--bg-light); 
+            color: var(--text-main); 
+            line-height: 1.6; 
+        }
+        .section-wrapper { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .content-card { 
+            background: var(--card-bg); 
+            border-radius: 12px; 
+            padding: 30px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        }
+        h1 { 
+            color: var(--primary-color); 
+            text-align: center; 
+            border-bottom: 2px solid var(--primary-color); 
+            padding-bottom: 12px; 
+        }
+        h2 { 
+            font-size: 18px; 
+            margin-top: 24px; 
+            color: var(--primary-color); 
+        }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root { 
+                --bg-light: #121212; 
+                --card-bg: #1e1e1e; 
+                --text-main: #e0e0e0; 
+                --primary-color: #38BDF8; 
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="section-wrapper">
+    <div class="content-card">
+        <h1>Chính sách Bảo mật</h1>
+        <p>Chính sách bảo mật này áp dụng cho ứng dụng <strong>Rusa Reader</strong> (mã gói: <code>com.lathedo.rusareader</code>) do <strong>lathedo</strong> phát triển[cite: 1].</p>
+
+        <h2>1. Thu thập và Xử lý Thông tin (100% Ngoại tuyến)</h2>
+        <p>Rusa Reader cam kết bảo vệ tuyệt đối quyền riêng tư của bạn. Ứng dụng hoạt động hoàn toàn ngoại tuyến (offline) trên thiết bị[cite: 1, 2]. Toàn bộ dữ liệu phát sinh trong quá trình sử dụng bao gồm: danh mục sách PDF, tiến độ đọc, các vùng tô màu trích dẫn (Highlight), ghi chú cá nhân, Thẻ Thu Hoạch nội dung, Khóm Lúa Kinh Nghiệm và các tham số ôn tập theo thuật toán Mindful FSRS đều được lưu trữ trực tiếp trong cơ sở dữ liệu SQLite cục bộ trên máy của bạn[cite: 1]. Chúng tôi không thu thập, không truyền tải qua mạng Internet, không lưu trên máy chủ từ xa và không chia sẻ bất kỳ dữ liệu cá nhân hay tệp tài liệu nào của bạn cho bên thứ ba[cite: 1, 2].</p>
+
+        <h2>2. Quyền Truy cập Bộ nhớ và Tệp tin</h2>
+        <p>Để thực hiện tính năng đọc và quản lý thư viện tài liệu cá nhân, Rusa Reader cần yêu cầu quyền truy cập bộ nhớ thiết bị (Bộ nhớ trong và Thẻ nhớ SD)[cite: 1, 2]. Quyền này chỉ được dùng duy nhất cho các mục đích:</p>
+        <ul>
+            <li>Quét danh mục các tệp sách định dạng <code>.pdf</code> trên máy để hiển thị lên giao diện[cite: 1, 2].</li>
+            <li>Đọc nội dung tệp, kết xuất trang sách và tạo ảnh bìa thu nhỏ trong bộ nhớ đệm[cite: 1].</li>
+            <li>Nạp tệp âm thanh nhạc nền do bạn chủ động lựa chọn[cite: 1].</li>
+            <li>Chia sẻ hoặc xóa tệp gốc khi có thao tác yêu cầu trực tiếp từ bạn[cite: 1, 2].</li>
+        </ul>
+
+        <h2>3. Tính năng Chuyển văn bản thành giọng nói (Text-to-Speech)</h2>
+        <p>Chức năng đọc sách nói (TTS) và hỗ trợ ôn tập "Tắm sương thụ động" được xử lý hoàn toàn qua công cụ tổng hợp giọng nói nội bộ của hệ điều hành Android (<code>android.speech.tts.TextToSpeech</code>)[cite: 1]. Văn bản trên tài liệu không bao giờ bị chuyển qua máy chủ trung gian[cite: 1].</p>
+
+        <h2>4. Quyền Kiểm soát và Xóa Dữ liệu</h2>
+        <p>Bạn giữ toàn quyền xóa hoặc chỉnh sửa từng ghi chú, thẻ thu hoạch, kệ sách hoặc xóa sách ra khỏi thư viện[cite: 1, 2]. Khi bạn chủ động gỡ cài đặt ứng dụng hoặc xóa dữ liệu ứng dụng trong Cài đặt Android, toàn bộ cơ sở dữ liệu tiến độ và ghi chú lưu trong phân vùng của Rusa Reader sẽ được xóa hoàn toàn khỏi thiết bị[cite: 1, 2].</p>
+
+        <h2>5. Thông tin Liên hệ</h2>
+        <p>Nếu bạn có bất kỳ câu hỏi hay góp ý nào về Chính sách Bảo mật này, vui lòng liên hệ nhà phát triển qua email: <a href="mailto:lathedo.taichi@gmail.com">lathedo.taichi@gmail.com</a>.</p>
+    </div>
+</div>
+</body>
+</html>
