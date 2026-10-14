@@ -64,28 +64,28 @@
 <div class="section-wrapper">
     <div class="content-card">
         <h1>Chính sách Bảo mật</h1>
-        <p>Chính sách bảo mật này áp dụng cho ứng dụng <strong>Rusa Reader</strong> (mã gói: <code>com.lathedo.rusareader</code>) do <strong>lathedo</strong> phát triển[cite: 1].</p>
+        <p>Chính sách bảo mật này áp dụng cho ứng dụng <strong>Rusa Reader</strong> (mã gói: <code>com.lathedo.rusareader</code>) do <strong>lathedo</strong> phát triển.</p>
 
-        <h2>1. Thu thập và Xử lý Thông tin (100% Ngoại tuyến)</h2>
-        <p>Rusa Reader cam kết bảo vệ tuyệt đối quyền riêng tư của bạn. Ứng dụng hoạt động hoàn toàn ngoại tuyến (offline) trên thiết bị[cite: 1, 2]. Toàn bộ dữ liệu phát sinh trong quá trình sử dụng bao gồm: danh mục sách PDF, tiến độ đọc, các vùng tô màu trích dẫn (Highlight), ghi chú cá nhân, Thẻ Thu Hoạch nội dung, Khóm Lúa Kinh Nghiệm và các tham số ôn tập theo thuật toán Mindful FSRS đều được lưu trữ trực tiếp trong cơ sở dữ liệu SQLite cục bộ trên máy của bạn[cite: 1]. Chúng tôi không thu thập, không truyền tải qua mạng Internet, không lưu trên máy chủ từ xa và không chia sẻ bất kỳ dữ liệu cá nhân hay tệp tài liệu nào của bạn cho bên thứ ba[cite: 1, 2].</p>
+        <h2>1. Thu thập và Xử lý Thông tin Cục bộ</h2>
+        <p>Phần lớn chức năng của Rusa Reader hoạt động ngoại tuyến trên thiết bị. Toàn bộ dữ liệu phát sinh bao gồm: danh mục sách, tiến độ đọc, vùng tô màu (Highlight), ghi chú, Thẻ Thu Hoạch và các tham số ôn tập thuật toán Mindful FSRS được lưu trữ trực tiếp trong cơ sở dữ liệu cục bộ trên máy của bạn. Chúng tôi không thu thập hoặc chia sẻ bất kỳ dữ liệu cá nhân hay tệp tài liệu nào của bạn cho bên thứ ba.</p>
 
-        <h2>2. Quyền Truy cập Bộ nhớ và Tệp tin</h2>
-        <p>Để thực hiện tính năng đọc và quản lý thư viện tài liệu cá nhân, Rusa Reader cần yêu cầu quyền truy cập bộ nhớ thiết bị (Bộ nhớ trong và Thẻ nhớ SD)[cite: 1, 2]. Quyền này chỉ được dùng duy nhất cho các mục đích:</p>
+        <h2>2. Sử dụng Dịch vụ Google Drive API (Đồng bộ hóa)</h2>
+        <p>Rusa Reader cung cấp tính năng đồng bộ hóa dữ liệu (Khu rừng tri thức, ghi chú) qua tài khoản Google của bạn. Khi bạn chọn sử dụng tính năng này:</p>
         <ul>
-            <li>Quét danh mục các tệp sách định dạng <code>.pdf</code> trên máy để hiển thị lên giao diện[cite: 1, 2].</li>
-            <li>Đọc nội dung tệp, kết xuất trang sách và tạo ảnh bìa thu nhỏ trong bộ nhớ đệm[cite: 1].</li>
-            <li>Nạp tệp âm thanh nhạc nền do bạn chủ động lựa chọn[cite: 1].</li>
-            <li>Chia sẻ hoặc xóa tệp gốc khi có thao tác yêu cầu trực tiếp từ bạn[cite: 1, 2].</li>
+            <li><strong>Dữ liệu được thu thập và truy cập:</strong> Ứng dụng yêu cầu quyền truy cập vào thư mục dữ liệu ẩn của ứng dụng (App Data Folder) trên Google Drive của bạn (scope: <code>https://www.googleapis.com/auth/drive.appdata</code>) để tải lên và tải xuống tệp sao lưu dữ liệu (MindBackup.json).</li>
+            <li><strong>Sử dụng dữ liệu:</strong> Dữ liệu này chỉ được sử dụng duy nhất cho mục đích đồng bộ tiến độ học tập và ghi chú của bạn giữa các thiết bị cá nhân. Chúng tôi không truy cập vào bất kỳ tệp tin cá nhân nào khác trên Google Drive của bạn.</li>
+            <li><strong>Chia sẻ dữ liệu:</strong> Chúng tôi cam kết KHÔNG chia sẻ, KHÔNG bán và KHÔNG tiết lộ dữ liệu đồng bộ này cho bất kỳ bên thứ ba nào.</li>
+            <li><strong>Tuân thủ Chính sách Dữ liệu Người dùng API của Google:</strong> Việc Rusa Reader sử dụng và chuyển dữ liệu nhận được từ Google API sang bất kỳ ứng dụng nào khác sẽ tuân thủ nghiêm ngặt <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Chính sách Dữ liệu Người dùng Dịch vụ API của Google</a>, bao gồm cả các yêu cầu về Sử dụng Hạn chế (Limited Use requirements).</li>
         </ul>
 
-        <h2>3. Tính năng Chuyển văn bản thành giọng nói (Text-to-Speech)</h2>
-        <p>Chức năng đọc sách nói (TTS) và hỗ trợ ôn tập "Tắm sương thụ động" được xử lý hoàn toàn qua công cụ tổng hợp giọng nói nội bộ của hệ điều hành Android (<code>android.speech.tts.TextToSpeech</code>)[cite: 1]. Văn bản trên tài liệu không bao giờ bị chuyển qua máy chủ trung gian[cite: 1].</p>
+        <h2>3. Quyền Truy cập Bộ nhớ thiết bị</h2>
+        <p>Để hiển thị và đọc tài liệu, ứng dụng yêu cầu quyền đọc tệp trên thiết bị chỉ để quét các tệp định dạng .pdf, .epub, .docx và tải nhạc nền từ máy của bạn. Tệp tài liệu của bạn không bao giờ bị tải lên máy chủ trung gian.</p>
 
         <h2>4. Quyền Kiểm soát và Xóa Dữ liệu</h2>
-        <p>Bạn giữ toàn quyền xóa hoặc chỉnh sửa từng ghi chú, thẻ thu hoạch, kệ sách hoặc xóa sách ra khỏi thư viện[cite: 1, 2]. Khi bạn chủ động gỡ cài đặt ứng dụng hoặc xóa dữ liệu ứng dụng trong Cài đặt Android, toàn bộ cơ sở dữ liệu tiến độ và ghi chú lưu trong phân vùng của Rusa Reader sẽ được xóa hoàn toàn khỏi thiết bị[cite: 1, 2].</p>
+        <p>Bạn giữ toàn quyền xóa ghi chú, ngắt kết nối tài khoản Google hoặc xóa dữ liệu ứng dụng. Khi ngắt kết nối hoặc gỡ cài đặt, dữ liệu đồng bộ trên Google Drive App Data vẫn thuộc quyền kiểm soát của bạn và có thể được quản lý/xóa thông qua cài đặt tài khoản Google.</p>
 
-        <h2>5. Thông tin Liên hệ</h2>
-        <p>Nếu bạn có bất kỳ câu hỏi hay góp ý nào về Chính sách Bảo mật này, vui lòng liên hệ nhà phát triển qua email: <a href="mailto:lathedo.taichi@gmail.com">lathedo.taichi@gmail.com</a>.</p>
+        <h2>5. Liên hệ</h2>
+        <p>Mọi thắc mắc về Chính sách Bảo mật, vui lòng liên hệ nhà phát triển qua email: <a href="mailto:lathedo.taichi@gmail.com">lathedo.taichi@gmail.com</a>.</p>
     </div>
 </div>
 </body>
