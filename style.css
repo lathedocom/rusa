@@ -1,8 +1,8 @@
-/* --- Hệ thống Biến số Màu sắc (Chế độ Sáng - Light Mode) --- */
+/* --- Hệ thống Biến số Màu sắc (Chỉ Chế độ Sáng) --- */
 :root {
-    --primary-color: #006A80; /* Màu chủ đạo của Rusa Reader */
+    --primary-color: #006A80;
     --primary-dark: #004D5E;
-    --accent-color: #2D6A4F;  /* Màu xanh cây lá Khu Rừng Tri Thức */
+    --accent-color: #2D6A4F; 
     --cta-color: #006A80;
     --cta-hover: #004D5E;
     
@@ -15,25 +15,6 @@
     --card-bg: #FFFFFF;
     --border-color: #E2E8F0;
     --shadow-color: rgba(0, 0, 0, 0.08);
-}
-
-/* --- Chế độ Tối (Dark Mode Tự động theo hệ thống) --- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --primary-color: #38BDF8;
-        --primary-dark: #7DD3FC;
-        --accent-color: #52B788;
-        --cta-color: #0284C7;
-        --cta-hover: #0369A1;
-        --text-main: #F8FAFC;
-        --text-light: #94A3B8;
-        --bg-white: #0F172A;
-        --section-bg-alt: #1E293B;
-        --toolbar-bg: #0F172A;
-        --card-bg: #1E293B;
-        --border-color: #334155;
-        --shadow-color: rgba(0, 0, 0, 0.4);
-    }
 }
 
 body {
@@ -166,13 +147,8 @@ body {
     padding: 80px 20px;
 }
 
-.bg-white {
-    background-color: var(--bg-white);
-}
-
-.bg-alt {
-    background-color: var(--section-bg-alt);
-}
+.bg-white { background-color: var(--bg-white); }
+.bg-alt { background-color: var(--section-bg-alt); }
 
 .container-inner {
     max-width: 1040px;
@@ -203,7 +179,7 @@ body {
     }
 }
 
-/* --- Khung Mockup Thiết bị --- */
+/* --- Khung Mockup Thiết bị (Mặc định cho Desktop) --- */
 .mockup-shape {
     background: var(--section-bg-alt);
     border-radius: 60px 20px 60px 20px;
@@ -250,6 +226,75 @@ body {
     margin: 0 4px; 
 }
 
+/* ========================================================= */
+/* --- RESPONSIVE LÀM ẢNH TO VÀ CĂN GIỮA TRÊN ĐIỆN THOẠI --- */
+/* ========================================================= */
+@media (max-width: 799px) {
+    .feature-section {
+        padding: 60px 16px;
+    }
+    .container-inner {
+        gap: 32px;
+    }
+    /* Đảm bảo TẤT CẢ hình ảnh đều được căn giữa trên thiết bị di động */
+    .feature-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 16px !important;
+        width: 100%;
+    }
+    /* Ép khối đệm mỏng lại để giải phóng không gian cho ảnh */
+    .mockup-shape {
+        padding: 16px; 
+        border-radius: 30px 10px 30px 10px;
+    }
+    .device-frame {
+        border-width: 6px; 
+        padding-top: 14px;
+        border-radius: 24px;
+    }
+    .device-frame::before {
+        height: 12px;
+    }
+    /* Tăng chiều cao ảnh tỷ lệ với màn hình (65% màn hình) */
+    .device-frame img {
+        max-height: 65vh; 
+        max-width: 100%; 
+        border-radius: 10px;
+        margin: 0 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mockup-shape {
+        padding: 12px;
+    }
+    /* Trên điện thoại dọc, ảnh có thể cao tới 70% màn hình để dễ nhìn */
+    .device-frame img {
+        max-height: 70vh; 
+    }
+    
+    /* Thiết lập riêng để 2 ảnh ở Tính năng 1 to và rõ ràng, không bị méo */
+    .feature-visual {
+        flex-direction: row; 
+        justify-content: center;
+    }
+    .feature-visual .mockup-shape {
+        flex: 1; /* Chiếm đều 50% bề ngang cho mỗi ảnh nếu có nhiều hơn 1 */
+        min-width: 130px; /* Tránh ảnh bị bóp méo, nếu màn quá nhỏ sẽ tự rớt xuống để đứng 1 mình */
+    }
+    
+    .hero-slogan {
+        font-size: 32px;
+    }
+    .feature-title {
+        font-size: 26px;
+    }
+}
+/* ========================================================= */
+
 /* --- Typography Chi tiết Tính năng --- */
 .feature-title {
     font-size: 32px;
@@ -266,29 +311,10 @@ body {
     line-height: 1.6;
 }
 
-.mt-4 {
-    margin-top: 24px;
-}
-
-.feature-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.feature-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.accent-icon {
-    color: var(--accent-color);
-    font-size: 24px;
-    margin-top: 2px;
-}
+.mt-4 { margin-top: 24px; }
+.feature-list { list-style: none; padding: 0; margin: 0; }
+.feature-list li { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 20px; line-height: 1.5; }
+.accent-icon { color: var(--accent-color); font-size: 24px; margin-top: 2px; }
 
 /* --- Kêu gọi hành động (CTA Section) --- */
 .cta-section {
@@ -299,7 +325,7 @@ body {
 .super__free {
     max-width: 900px;
     margin: 0 auto;
-    background: linear-gradient(135deg, #006A80, #2D6A4F);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: #FFFFFF;
     padding: 50px 24px;
     border-radius: 20px;
